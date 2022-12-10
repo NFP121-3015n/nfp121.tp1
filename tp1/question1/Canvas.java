@@ -164,7 +164,8 @@ public class Canvas {
         for (Iterator i = objects.iterator(); i.hasNext();) {
             ((ShapeDescription) shapes.get(i.next())).draw(graphic);
         }
-        canvas.repaint();
+        //canvas.repaint();
+        canvas.paintImmediately(canvas.getX(), canvas.getY(), canvas.getWidth(), canvas.getHeight());
     }
 
     /**
